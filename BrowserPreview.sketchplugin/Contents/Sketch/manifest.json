@@ -8,19 +8,27 @@
   "manifestUrl": "https://github.com/Freakland/sketch-browser-preview/blob/master/BrowserPreview.sketchplugin/Contents/Sketch/manifest.json",
   "downloadUrl": "https://github.com/Freakland/sketch-browser-preview/archive/master.zip",
   "compatibleVersion": "4.1",
-  "commands": [{
-    "script": "preview.js",
-    "handler": "onRun",
-    "shortcut": "cmd shift .",
-    "name": "Browser Preview",
-    "identifier": "browser_preview",
-    "isRoot": true
-  }],
+  "commands": [
+    {
+      "script": "preview.js",
+      "handler": "mobilePreview",
+      "shortcut": "cmd shift .",
+      "name": "Mobile Device",
+      "identifier": "mobile_preview"
+    },
+    {
+      "script": "preview.js",
+      "handler": "desktopPreview",
+      "shortcut": "cmd shift .",
+      "name": "Desktop Device",
+      "identifier": "desktop_preview"
+    }
+  ],
   "menu": {
     "title" : "Preview on Browser",
-    "isRoot" : true,
     "items" : [
-      "browser_preview"
+      "mobile_preview",
+      "desktop_preview"
     ]
   }
 }
